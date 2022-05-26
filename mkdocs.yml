@@ -1,0 +1,7 @@
+site_name: Genética Cuantitativa y Mejora
+
+theme:
+  name: gitbook
+  logo: img/logo.png
+
+plugins: []
