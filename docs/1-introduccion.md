@@ -24,7 +24,7 @@ Todas o casi todas las plantas comerciales (alimentos, decoración, etc.) son pl
 
 En cuanto al ganado, se ha obtenido un importante cambio genético. Depende del carácter y de la especie. El cambio teórico es aquel que depende de la heredabilidad, de la variabilidad y de la intensidad de la selección. Para la mayoría de caracteres, se puede obtener un cambio **acumulativo** del 1% anual. 
 
-| ![Tasas anuales de cambio genético en ganado](img/tasa_anual_cambio_genetico_ganado.png) |
+| ![Tasas anuales de cambio genético en ganado](img/clase1_tasa_anual_cambio_genetico_ganado.png) |
 | :-- |
 | **Figura 1.** Tasas anuales de cambio genético en ganado |
 
@@ -42,7 +42,7 @@ Ramas de la genética implicadas en la mejora:
 ### 1.2. Esquema de la Genética cuantitativa y resumen del curso
 La Genética cuantitativa gira en torno a analizar y describir el parecido entre parientes (un individuo alto, tiende a dar descendientes altos). 
 
-| ![esquema genética cuantitativa](img/esquema_genetica_cuantitativa.png) |
+| ![esquema genética cuantitativa](img/clase1_esquema_genetica_cuantitativa.png) |
 | :-- |
 | **Figura 2.** Esquema de la Genética cuantitativa | 
 
@@ -52,7 +52,7 @@ El curso se dividirá en el estudio tanto de la parte teórica como de la parte 
 
 Partiendo del modelo infinitesimal, por el cual los caracteres cuantitativos son el resultado de la acción de múltiples genes. El fenotipo está determinado por la base genética del individuo, que a su vez tiene un componente aditivo, uno de dominancia y otro de interacción, y por el ambiente, que tiene a su vez un componente general y un componente especial. De igual modo, las varianzas se dividirán en los mismos componentes. En referencia a la varianza aditiva, hablaremos de la **heredabilidad (h²)**, y analizar la varianza ambiental general nos llevará a un parámetro llamado **repetibilidad**
 
-| ![enfoque teorico parecido entre parientes](img/enfoque_teorico_parecido_parientes.png) |
+| ![enfoque teorico parecido entre parientes](img/clase1_enfoque_teorico_parecido_parientes.png) |
 | :-- |
 | **Figura 3.** Enfoque teórico del parecido entre parientes, dentro del marco del modelo infinitesimal | 
 
@@ -65,7 +65,7 @@ Todo esto será la base para establecer el parecido entre parientes. **En este c
 
 A la hora de aplicarlo, mediremos el grado de parecido entre pariendes a través de parámetros genéticos. Estos determinarán el esquema de selección, que mediante ciertos apareamientos darán lugar a una mejora del carácter a nivel de la población.
 
-| ![enfoque practico parecido entre parientes](img/enfoque_practico_parecido_parientes.png) |
+| ![enfoque practico parecido entre parientes](img/clase1_enfoque_practico_parecido_parientes.png) |
 | :-- |
 | **Figura 4.** Enfoque práctico del parecido entre parientes | 
 
