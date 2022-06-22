@@ -9,7 +9,12 @@ Los caracteres pueden ser cualitativos (discontinuos) o cuantitativos (continuos
 Existían dos posturas separadas en cuanto a la herencia genética:
 
 - La **mendeliana** defendía que las diferencias hereditarias evolutivamente importantes son cualitativas y discontinuas y que las pequeñas variaciones se debían al ambiente
-- La biométrica creía que la variación hereditaria es cuantitativa y continua. 
+- La **biométrica** creía que la variación hereditaria es cuantitativa y continua. 
+
+```{R, collapse=FALSE}
+# execute code if the date is later than a specified day
+do_it = Sys.Date() > '2018-02-14'
+```
 
 Dos experimentos acercan ambas posturas. 
 
