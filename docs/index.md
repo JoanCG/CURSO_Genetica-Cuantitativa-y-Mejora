@@ -1,8 +1,6 @@
 # Inicio
 
-Apuntes del curso impartido por Jesús Piedrafita en el grado de Genética de la UAB, durante el 3er curso. Para acompañar este curso, se recurre al siguiente material adicional:
-
-- *Genética cuantitativa* de Armando Caballero (2017)
+Apuntes del curso impartido por Jesús Piedrafita en el grado de Genética de la UAB, durante el 3er curso. 
 
 Resumen de los videos del curso:
 
@@ -26,3 +24,8 @@ Resumen de los videos del curso:
 - [18. Respuesta observada](https://youtu.be/EN27tVXwhuA)
 - [19. Depresión consanguínea](https://youtu.be/pVwfJVyIfks)
 - [20. Cruzamiento](https://youtu.be/pVwfJVyIfks) 
+
+Para acompañar este curso, se recurre al siguiente material adicional:
+
+- *Genética cuantitativa* de Armando Caballero (2017) [LIBRO]
+- *PCB 6555 - Introduction to Quantitative Genetics (University of Florida)*, de Felipe Ferrão and Marcio Resende (2020) [CURSO]
