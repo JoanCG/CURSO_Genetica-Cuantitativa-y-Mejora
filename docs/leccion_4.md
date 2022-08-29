@@ -1,5 +1,5 @@
 ---
-title: Componentes de varianza 
+title: 4. Componentes de varianza 
 ---
 
 # 4. Componentes de varianza y correlación intra-clase

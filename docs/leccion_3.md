@@ -1,5 +1,5 @@
 ---
-title: Valores y medias
+title: 3. Valores y medias
 ---
 
 # 3. Valores y medias en el modelo infinitesimal

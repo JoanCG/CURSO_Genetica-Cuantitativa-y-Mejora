@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>Componentes de varianza - Genética Cuantitativa y Mejora</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta name="generator" content="mkdocs-1.2.3, mkdocs-gitbook-1.0.7">
+
+<link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+<meta name="HandheldFriendly" content="true"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta rel="next" href="" />
+<link href="../css/style.min.css" rel="stylesheet"> 
+</head>
+
+<body>
+<div class="book">
+<div class="book-summary">
+
+<nav role="navigation">
+<ul class="summary">
+<li>
+<a href=".." target="_blank" class="custom-link">Genética Cuantitativa y Mejora</a>
+</li>
+<li class="divider"></li>
+<li class="chapter" data-path="">
+<a href="..">Inicio</a>
+<li class="chapter" data-path="leccion_1/">
+<a href="../leccion_1/">Introducción</a>
+<li class="chapter" data-path="leccion_2/">
+<a href="../leccion_2/">Caracteres Métricos</a>
+<li class="chapter" data-path="leccion_3/">
+<a href="../leccion_3/">Valores y medias</a>
+<li class="chapter active" data-path="leccion_4/">
+<a href="./">Componentes de varianza</a>
+<li class="chapter" data-path="leccion_5/">
+<a href="../leccion_5/">Varianzas</a>
+<li class="divider"></li>
+
+
+
+<li><a href="http://www.mkdocs.org">
+Published with MkDocs
+</a></li>
+
+<li><a href="https://github.com/GitbookIO/theme-default">
+Theme by GitBook
+</a></li>
+</ul>
+
+</nav>
+
+</div> <!-- end of book-summary -->
+
+<div class="book-body">
+<div class="body-inner">
+<div class="book-header" role="navigation">
+
+<!-- Title -->
+<h1>
+<i class="fa fa-circle-o-notch fa-spin"></i>
+<a href="." ></a>
+</h1>
+
+</div> <!-- end of book-header -->
+
+<div class="page-wrapper" tabindex="-1" role="main">
+<div class="page-inner">
+
+<section class="normal markdown-section">
+
+
+
+<h1 id="4-componentes-de-varianza-y-correlacion-intra-clase">4. Componentes de varianza y correlación intra-clase</h1>
+<p><em>Enlace de la clase: <a href="https://youtu.be/ibgna6SOZ1A">https://youtu.be/ibgna6SOZ1A</a></em></p>
+<hr />
+<p>Para esta lección, vamos a emplear los datos de un pequeño experimento para asentar mejor los conceptos. El experimento consiste en comparar la longitud de la vaina en diferentes plantas (<strong>s=5</strong>). Para ello, se miden <strong>n=8</strong> muestras de cada planta. </p>
+<table>
+<thead>
+<tr>
+<th align="left"><img alt="datos ejemplo" src="../img/clase4_datos_ejemplo.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><strong>Figura 1.</strong> Datos del experimento que usaremos durante esta lección.</td>
+</tr>
+</tbody>
+</table>
+<p>Hay que tener en cuenta de que este diseño es <strong>equilibrado</strong>, es decir, tiene el mismo número de observaciones para cada grupo.</p>
+<p>Adicionalmente, dejo aquí una figura adicional que resume las propiedades de los sumatorios (<em>Figura adicional 1a</em>) y las propiedades de las expectaciones y las varianzas (<em>Figura adicional 1b</em>)</p>
+<table>
+<thead>
+<tr>
+<th align="center"><img alt="propiedades de los sumatorios" src="../img/clase4_adicional_propiedades_sumatorios.png" /></th>
+<th align="center"><img alt="propiedades de las expectaciones y las varianzas" src="../img/clase4_adicional_propiedades_varianzas.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><strong>Figura adicional 1a.</strong> Propiedades de los sumatorios.</td>
+<td align="center"><strong>Figura adicional 1b.</strong> Propiedades de las expectaciones y las varianzas.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="41-anova">4.1. ANOVA</h2>
+<p>Para hacer un ANOVA, tenemos que en primer lugar descomponer la varianza en dos componentes: la varianza dentro de cada grupo y la varianza entre grupos. Para hacer este análisis, asumimos un modelo lineal aditivo en el que cada valor depende de una media general (<span class="arithmatex">\(\mu\)</span>), el efecto de cada planta (<span class="arithmatex">\(g\)</span>) y el error (<span class="arithmatex">\(e\)</span>).</p>
+<blockquote>
+<p>El error (<span class="arithmatex">\(e\)</span>) recoge el resto de efectos que no se incluyen en el modelo. Por ejemplo, para este modelo el error recogería el efecto de la temperatura, la humedad, la presión, etc.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="left"><img alt="descomposición de la varianza" src="../img/clase4_descomposicion_varianza.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><strong>Figura 2.</strong> Descomposición de la varianza asumiendo un modelo lineal aditivo. <em><span class="arithmatex">\(y_{ij}\)</span> es el valor de cada muestra <span class="arithmatex">\(j\)</span> en cada planta <span class="arithmatex">\(i\)</span>; <span class="arithmatex">\(\overline{y}_{..}\)</span> es la media general; <span class="arithmatex">\(\overline(y)_{i.}\)</span> es la media de cada grupo.</em></td>
+</tr>
+</tbody>
+</table>
+<p>La variación se mide como la suma de cuadrados (el desarrollo para llegar a las equivalencias aparece en el video):</p>
+<ul>
+<li>La suma de cuadrados total es la desviación de cada muestra respecto a la media general. Su equivalente sería <span class="arithmatex">\(\sum_{ij}y^2_{ij} - \frac{y^2_{..}}{sn}\)</span></li>
+<li>La suma de cuadrados "intra-grupo" es la desviación de cada observación a la media de su grupo. Su equivalente sería <span class="arithmatex">\(\sum_{ij}y^2_{ij} - \frac{1}{n} \sum_{i}y^2_i\)</span></li>
+<li>
+<p>La suma de cuadrados "inter-grupo" es la desviación de cada media grupal a la media general. Su equivalente sería <span class="arithmatex">\(\frac{1}{n} \sum_{i}y^2_i - \frac{y^2_{..}}{sn}\)</span></p>
+<blockquote>
+<p>Para la suma de cuadrados "inter-grupo", la <em>n</em> está multiplicando la suma de cuadrados porque estaríamos sumando para <span class="arithmatex">\(j\)</span> algo que no tiene <span class="arithmatex">\(j\)</span>. Esto, según las propiedades de los sumatorios (<em>Figura adicional 1a</em>), equivale a multiplicar por el número de <span class="arithmatex">\(j\)</span> que tenemos. </p>
+</blockquote>
+</li>
+</ul>
+<p>Si nos fijamos en las equivalencias de cada suma de cuadrados, podemos observar que las tres se pueden definir a partir de tres cantidades básicas:<br />
+- <span class="arithmatex">\(\sum_{ij}y^2_{ij}\)</span><br />
+- <span class="arithmatex">\(\frac{1}{n} \sum_{i}y^2_i\)</span><br />
+- <span class="arithmatex">\(\frac{y^2_{..}}{sn}\)</span></p>
+<p>Con estas equivalencias, podemos construir la clásica tabla de ANOVA (<em>Figura 3</em>). Al resolverla, obtendríamos el estadístico F y a partir de él podríamos determinar la probabilidad de que nuestras conclusiones se deban al azar (p-value).</p>
+<table>
+<thead>
+<tr>
+<th align="center"><img alt="tabla anova" src="../img/clase4_tabla_anova.png" /></th>
+<th align="center"><img alt="tabla anova ejemplo" src="../img/clase4_tabla_anova_ejemplo.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><strong>Figura 3a.</strong> Tabla ANOVA empleando las cantidades básicas equivalentes.</td>
+<td align="center"><strong>Figura 3b.</strong> Resolución de la tabla ANOVA empleando los datos de nuestro experimento de ejemplo.</td>
+</tr>
+</tbody>
+</table>
+<p>Para nuestro ejemplo, la resolución de la tabla ANOVA (<em>Figura 3b</em>) daría lugar al rechazo de la hipótesis nula, concluyendo que las medias de las vainas de las diferentes plantas difieren. </p>
+<h2 id="42-modelos-de-efectos-aleatorios">4.2. Modelos (de efectos) aleatorios</h2>
+<p>Los modelos aleatorios, al igual que los fijos, tienen una serie de supuestos (<em>Figura 5</em>). En cuanto a los efectos aleatorios:</p>
+<ul>
+<li>
+<p>La esperanza de la variable aleatoria (en este caso, la planta) es <span class="arithmatex">\(E(g_i) = 0\)</span></p>
+</li>
+<li>
+<p>La esperanza del efecto de grupo elevado al cuadrado es igual a la varianza entre grupos <span class="arithmatex">\(E(g^2_i) = \sigma^2_B\)</span>. Esto viene del desarrollo de la primera propiedad de la varianza (<em>Figura adicional 1b</em>):  </p>
+<ul>
+<li><span class="arithmatex">\(\sigma^2_B = E(g^2_i) - E(g_i)\)</span></li>
+<li>como <span class="arithmatex">\(E(g_i) = 0\)</span>, nos queda <span class="arithmatex">\(\sigma^2_B = E(g^2_i)\)</span><blockquote>
+<p>La varianza también se podría anotar como <span class="arithmatex">\(\sigma^2_{g_i}\)</span>. Al ser la varianza de los efectos de cada planta, también se puede anotar como la varianza <strong>entre</strong> los grupos de plantas. </p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li>
+<p>Se asume independencia de las plantas, ya que <span class="arithmatex">\(E(g_i g_{i'}) = 0\)</span></p>
+</li>
+</ul>
+<p>En cuanto a los errores:</p>
+<ul>
+<li>La esperanza del error es <span class="arithmatex">\(E(e_{ij}) = 0\)</span></li>
+<li>La esperanza de los errores al cuadrado, aplicando un razonamiento similar que en el caso de los efectos, es igual a la varianza de los errores <span class="arithmatex">\(E(e^2_{ij}) = \sigma^2_e\)</span></li>
+<li>Los errores de un mismo grupo y los errores de diferentes grupos son independientes <span class="arithmatex">\(E(e_{j(i)} e_{j'(i)}) = E(e_{j(i)} e_{j'(i')}) = 0\)</span></li>
+</ul>
+<p>Para calcular los componentes de varianza, necesitaremos calcular las <strong>esperanzas de los cuadrados medios</strong>, que eran el cociente de la suma de cuadrados partidos por los grados de libertad. La suma de cuadrados se podía obtener a partir de las tres cantidades básicas: <span class="arithmatex">\(\sum_{ij}y^2_{ij}\)</span>, <span class="arithmatex">\(\frac{1}{n} \sum_{i}y^2_i\)</span> y <span class="arithmatex">\(\frac{y^2_{..}}{sn}\)</span>. </p>
+<p>El cálculo de las esperanzas de estas tres cantidades básicas lo podemos encontrar en la <em>Figura 6</em>.</p>
+<table>
+<thead>
+<tr>
+<th align="center"><img alt="modelo aleatorio cantidad basica 1" src="../img/clase4_cantidades_basicas_efectos_aleatorios_1.png" /></th>
+<th align="center"><img alt="modelo aleatorio cantidad basica 2" src="../img/clase4_cantidades_basicas_efectos_aleatorios_2.png" /></th>
+<th align="center"><img alt="modelo aleatorio cantidad basica 3" src="../img/clase4_cantidades_basicas_efectos_aleatorios_3.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><strong>Figura 6a.</strong> Suma de cuadrados (muestra)</td>
+<td align="center"><strong>Figura 6c.</strong> Suma de cuadrados (grupo)</td>
+<td align="center"><strong>Figura 6c.</strong> Suma de cuadrados (general)</td>
+</tr>
+</tbody>
+</table>
+<p>Ahora calcularemos las esperanzas de las sumas de cuadrados:</p>
+<ul>
+<li>
+<p>La <strong>esperanza del cuadrado medio del error</strong> (o la varianza dentro de los grupos) (<em>Figura 7a</em>) es <span class="arithmatex">\(\sigma^2_e\)</span>. Esto implica que <strong>la esperanza del cuadrado medio del error es un estimador insesgado de la varianza del error.</strong></p>
+<blockquote>
+<p><em>Un estimador de un parámetro se dice que es </em><em>insesgado</em><em> si su valor esperazo es igual al valor verdadero</em>, <a href="https://www.statlect.com/glossary/unbiased-estimator">fuente</a></p>
+</blockquote>
+</li>
+<li>
+<p>La <strong>esperanza del cuadrado medio entre grupos</strong> (<em>Figura 7b</em>) es <span class="arithmatex">\(n\sigma^2_B + \sigma^2_e\)</span>. En este caso, obtenemos un <strong>estimador sesgado</strong>. </p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center"><img alt="SS error" src="../img/clase4_SSe.png" /></th>
+<th align="center"><img alt="SS B" src="../img/clase4_SSb.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><strong>Figura 7a.</strong> Esperanza del cuadrado medio del error</td>
+<td align="center"><strong>Figura 7b.</strong> Esperanza del cuadrado medio del efecto</td>
+</tr>
+</tbody>
+</table>
+<p>Para estimar los componentes de varianza, podemos emplear ambas ecuaciones para tener un sistema de dos ecuaciones con dos incógnitas (<span class="arithmatex">\(\hat{\sigma}^2_B\)</span> y <span class="arithmatex">\(\hat{\sigma}^2_e\)</span>), ya que tanto <span class="arithmatex">\(n\)</span> como <span class="arithmatex">\(MS_e\)</span> y <span class="arithmatex">\(MS_B\)</span> son cantidades conocidas. De este modo, resolviendo este sistema de ecuaciones, podemos obtener las estimaciones para ambos componentes de varianza. El estadístico <span class="arithmatex">\(F &gt; 1\)</span> solo se dará cuando <span class="arithmatex">\(\sigma^2_B &gt; 0\)</span>, por lo que podremos rechazar la hipótesis nula <span class="arithmatex">\(\sigma^2_B = 0\)</span>.</p>
+<h2 id="43-correlacion-intraclase">4.3. Correlación intraclase</h2>
+<p>La <strong>correlación intraclase es la proporción de la variación total atribuida al componente aleatorio estudiado</strong> (en este caso, las diferentes plantas). Esta correlación se deriva de la correlación de Pearson. Podemos encontrar su desarrollo en la <em>Figura 8</em>, que concluye que <span class="arithmatex">\(r = \frac{\sigma^2_B}{\sigma^2_B\sigma^2_e}\)</span>. </p>
+<table>
+<thead>
+<tr>
+<th align="center"><img alt="correlación intraclase 1" src="../img/clase4_correlacion_intraclase_1.png" /></th>
+<th align="center"><img alt="correlación intraclase 2" src="../img/clase4_correlacion_intraclase_2.png" /></th>
+<th align="center"><img alt="correlación intraclase ejemplo" src="../img/clase4_correlacion_intraclase_ejemplo.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><strong>Figura 8a.</strong> Correlación de Pearson (<span class="arithmatex">\(r\)</span>) y covarianza</td>
+<td align="center"><strong>Figura 8c.</strong> Correlación de Pearson (<span class="arithmatex">\(r\)</span>) y la raíz cuadrada del producto de las varianzas</td>
+<td align="center"><strong>Figura 8c.</strong> Correlación intraclase de nuestro ejemplo</td>
+</tr>
+</tbody>
+</table>
+<p>Para diseños equilibrados como el que hemos usado de ejemplo, los componentes de varianza estimado obtenidos con un modelo de la partición de la varianza y un modelo REML son idénticas. </p>
+<hr />
+<h6 id="02-08-2022">02-08-2022</h6>
+
+
+</section>
+
+</div> <!-- end of page-inner -->
+</div> <!-- end of page-wrapper -->
+
+</div> <!-- end of body-inner -->
+
+</div> <!-- end of book-body -->
+<script src="../js/main.js"></script>
+<script src="../javascripts/mathjax.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="../js/gitbook.min.js"></script>
+<script src="../js/theme.min.js"></script>
+</body>
+</html>
