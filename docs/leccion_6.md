@@ -2,7 +2,7 @@
 title: 6. Repetibilidad
 ---
 
-# 5. Estudios de las varianzas
+# 6. Repetibilidad
 
 *Enlace de la clase: [https://youtu.be/hPk58gclNxs](https://youtu.be/hPk58gclNxs)*
 
