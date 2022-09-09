@@ -1,8 +1,8 @@
 ---
-title: 5. Varianzas
+title: 5. Estudio de las varianzas (I)
 ---
 
-# 5. Estudios de las varianzas
+# 5. Varianzas genéticas
 
 *Enlace de la clase: [https://youtu.be/GOnXPxKfLJ0](https://youtu.be/GOnXPxKfLJ0)*
 

@@ -29,3 +29,4 @@ Para acompañar este curso, se recurre al siguiente material adicional:
 
 - *Genética cuantitativa* de Armando Caballero (2017) [LIBRO]
 - *PCB 6555 - Introduction to Quantitative Genetics (University of Florida)*, de Felipe Ferrão and Marcio Resende (2020) [CURSO]
+- *Notas sobre teoría de mejora genética* de Jesús Piedrafita Arilla (1999) [LIBRO]

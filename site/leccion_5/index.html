@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-<title>Varianzas - Genética Cuantitativa y Mejora</title>
+<title>5. Estudio de las varianzas (I) - Genética Cuantitativa y Mejora</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 <meta name="generator" content="mkdocs-1.2.3, mkdocs-gitbook-1.0.7">
@@ -30,15 +30,17 @@
 <li class="chapter" data-path="">
 <a href="..">Inicio</a>
 <li class="chapter" data-path="leccion_1/">
-<a href="../leccion_1/">Introducción</a>
+<a href="../leccion_1/">1. Introducción</a>
 <li class="chapter" data-path="leccion_2/">
-<a href="../leccion_2/">Caracteres Métricos</a>
+<a href="../leccion_2/">2. Caracteres Métricos</a>
 <li class="chapter" data-path="leccion_3/">
-<a href="../leccion_3/">Valores y medias</a>
+<a href="../leccion_3/">3. Valores y medias</a>
 <li class="chapter" data-path="leccion_4/">
-<a href="../leccion_4/">Componentes de varianza</a>
+<a href="../leccion_4/">4. Componentes de varianza</a>
 <li class="chapter active" data-path="leccion_5/">
-<a href="./">Varianzas</a>
+<a href="./">5. Estudio de las varianzas (I)</a>
+<li class="chapter" data-path="leccion_6/">
+<a href="../leccion_6/">6. Estudio de las varianzas (II)</a>
 <li class="divider"></li>
 
 
@@ -75,11 +77,119 @@ Theme by GitBook
 
 
 
-<h1 id="4-estudios-de-las-varianzas">4. Estudios de las varianzas</h1>
+<h1 id="5-varianzas-geneticas">5. Varianzas genéticas</h1>
 <p><em>Enlace de la clase: <a href="https://youtu.be/GOnXPxKfLJ0">https://youtu.be/GOnXPxKfLJ0</a></em></p>
 <hr />
+<p>En esta lección, continuamos empleando los datos del ejemplo de la lección anterior:</p>
+<table>
+<thead>
+<tr>
+<th align="left"><img alt="datos ejemplo" src="../img/clase4_datos_ejemplo.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><strong>Figura 1.</strong> Datos del experimento que usaremos durante esta lección.</td>
+</tr>
+</tbody>
+</table>
+<p>En esta lección, analizaremos cómo son las varianzas. En primer lugar, debemos recordar que la varianza muestras es un estimador de la varianza poblacional, y es el sumatorio de las desviaciones de cada observación a la media general, todo elevado al cuadrado (Suma de Cuadrados), dividido por los grados de libertad, en este caso <span class="arithmatex">\(n-1\)</span>. </p>
+<table>
+<thead>
+<tr>
+<th align="left"><img alt="estimador varianza" src="../img/clase5_varianza.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><strong>Figura 2.</strong> La varianza muestral como estimador de la varianza poblacional.</td>
+</tr>
+</tbody>
+</table>
+<p>Ya vimos en la <strong>Lección 3</strong> la descomposición de los componentes de la varianza fenotípica. El conocimiento de estos componentes de varianza nos va a permitir conocer la relevancia de cada uno de ellos relativa a la varianza fenotípica total. Es de especial relevancia la varianza aditiva, por ejemplo, que es la principal responsable del parecido entre parientes. </p>
+<table>
+<thead>
+<tr>
+<th align="left"><img alt="varianza fenotípica" src="../img/clase5_varianza-fenotipica.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><strong>Figura 3.</strong> Descomposición de la varianza fenotípica.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="varianza-aditiva">Varianza aditiva</h2>
+<p>La varianza aditiva es la varianza de los valores mejorantes. Si nos centramos en la varianza aportada por un único locus, partiendo que la media de los valores mejorantes es 0 (<span class="arithmatex">\(E(x)=0\)</span>), obtenemos que la fórmula de la varianza (originalmente, <span class="arithmatex">\(V_x = E(x²) + E(x)²\)</span>) se ve reducida a <span class="arithmatex">\(E(x²)\)</span>; en este caso, la esperanza de los valores mejorantes al cuadrado. La media de los valores mejorantes se calcula como el valor mejorante de cada genotipo por su frecuencia. </p>
+<table>
+<thead>
+<tr>
+<th align="left"><img alt="varianza aditiva" src="../img/clase5_varianza-aditiva.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><strong>Figura 4.</strong> Varianza aditiva.</td>
+</tr>
+</tbody>
+</table>
+<p>Como vemos en la <em>Figura 3</em>, la varianza aditiva depende en última instancia de las frecuencias del genotipo y del efecto medio de susticución alélica (<span class="arithmatex">\(\alpha\)</span>). Por este motivo, decimos que la varianza aditiva es una propiedad de la población (frecuencias alélicas que dependen de la población) y del carácter (efecto medio de sustitución).</p>
+<h2 id="varianza-de-dominancia">Varianza de dominancia</h2>
+<p>De nuevo, tenemos que la media de la dominancia es igual a 0, por lo que la varianza de la desviación de dominancia es la media de las desviaciones de dominancia al cuadrado. Al igual que la anterior, la varianza dominante es una propiedad de la población y el carácter. </p>
+<table>
+<thead>
+<tr>
+<th align="left"><img alt="varianza de dominancia" src="../img/clase5_varianza-dominancia.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><strong>Figura 5.</strong> Varianza de dominancia.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="varianza-total-de-un-locus">Varianza total de un locus</h2>
+<p>Se puede demostrar, como vemos en la <em>Figura 6</em>, que estas son independientes. Por lo tanto, la varianza total de un locus sería la suma de la varianza aditiva y la varianza dominante. </p>
+<table>
+<thead>
+<tr>
+<th align="left"><img alt="varianza total de un locus" src="../img/clase5_varianza-total-locus.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><strong>Figura 6.</strong> Varianza total de un locus como suma de <span class="arithmatex">\(V_A + V_D\)</span>.</td>
+</tr>
+</tbody>
+</table>
+<p>Si nos fijamos en el gráfico de la izquierda de la <em>Figura 6</em>, extraído de <em>Falconer (1970)</em>, podemos ver:</p>
+<ul>
+<li>a) si no existe varianza dominante, el máximo valor se alcanza cuando <span class="arithmatex">\(p=q=0.5\)</span>. </li>
+<li>b) con dominancia completa, <span class="arithmatex">\(d=a\)</span> y la varianza genética total del locus sigue dependiendo de las frecuencias génicas. En este caso, el máximo se alcanza en valores ligeramente superiores, pero la varianza es aún así baja cuando la frecuencia alélica es baja. </li>
+<li>c) con sobredominancia (los heterocigotos presentan mayor valor genético que los homocigotos), <span class="arithmatex">\(d&gt;a\)</span>, el maáximo se alcanza de nuevo en frecuencias génicas intermedias, aunque la curva no es tan pronucniada como en a). </li>
+</ul>
+<p>De este gráfico podemos concluir que los <strong>loci con frecuencias génicas intermedias aportan más a la varianza</strong>.</p>
+<table>
+<thead>
+<tr>
+<th align="left"><img alt="ejemplo de varianza total de un locus" src="../img/clase5_varianza-total-ejemplo.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><strong>Figura 7.</strong> Ejemplo para la <span class="arithmatex">\(a\)</span>-S1 caseina de la varianza total de un locus.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="varianza-de-interaccion-o-epistatica">Varianza de interacción (o epistática)</h2>
+<p>Si nos circunscribimos a la interacción entre dos factores, puede haber interacción de dos factores: entre dos valores mejorantes (<span class="arithmatex">\(V_AA\)</span>), entre el valor mejorante de un locus y la desviación dominante del otro (<span class="arithmatex">\(V_AD\)</span>) y entre dos desviaciones dominantes (<span class="arithmatex">\(V_DD\)</span>). <strong>La varianza de interacción es la suma de todos estos componentes</strong>.</p>
+<p>La varianza genotípica global sería la suma de las varianzas aditivas y dominantes que aportasen todos los loci más la varianza de interacción entre todos ellos. </p>
+<h2 id="correlacion-genotipo-ambiente">Correlación genotipo-ambiente</h2>
+<p>A veces, nos encontramos que el componente genético y el componente ambiental no son independientes. Por ejemplo, en la producción lechera es común alimentar a las vacas según su nivel de producción (que es un valor condicionado de forma importante por el genotipo). Esto provoca que los valores genotípicos no sean independientes entre sí. 
+En este caso, se genera un coeficiente de covarianza entre ambos componentes, que normalmente se desconoce con exactitud. </p>
+<p>Otra perturbación a la fórmula <span class="arithmatex">\(V_P = V_G + V_E\)</span> se da cuando se produce una interacción entre el genotipo y el ambiente. La idea es que una misma variación ambiental no tendrá el mismo efecto en todos los genotipos. Un ejemplo puede ser que el aumento de la cantidad de alimento en diferentes razas de producción lechera. Para algunas razas, el aumento de alimento comporta un aumento de producción, mientras que en otras no tiene efecto o incluso tiene un efecto negativo. Este efecto es definido como la "norma de reacción" o la "sensibilidad ambiental" (acuñado por Falconer). </p>
 <hr />
-<h6 id="02-08-2022">02-08-2022</h6>
+<h6 id="29-08-2022">29-08-2022</h6>
 
 
 </section>
